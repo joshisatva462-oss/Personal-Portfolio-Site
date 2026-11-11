@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Satva Joshi | Portfolio</title>
+  <style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { margin: 0; font: 16px/1.5 Arial, sans-serif; }
+.page {
+  --bg: #f4f6fb; --card: #fff; --ink: #182238;
+  --muted: #65718a; --line: #dfe5f0; --accent: #5367eb;
+  min-height: 100vh; background: var(--bg); color: var(--ink);
+}
+header {
+  position: sticky; top: 0; z-index: 2; display: flex;
+  align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px max(16px, calc((100% - 1080px) / 2));
+  background: var(--card); border-bottom: 1px solid var(--line);
+}
+.brand { color: var(--ink); font-weight: bold; text-decoration: none; white-space: nowrap; }
+.brand b {
+  display: inline-grid; width: 34px; height: 34px; place-items: center;
+  margin-right: 6px; border-radius: 10px; background: var(--accent); color: white;
+}
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+nav a { padding: 6px 8px; border-radius: 20px; color: var(--muted); font-size: 13px; text-decoration: none; }
+nav a:hover { background: var(--bg); color: var(--accent); }
+main { width: min(1000px, calc(100% - 32px)); margin: auto; }
+.hero {
+  position: relative; display: grid; min-height: 330px; align-items: center;
+  overflow: hidden; margin: 22px 0; border-radius: 20px;
+  background: linear-gradient(135deg, #111a39, #263b70); color: white;
+}
+.intro { position: relative; padding: 30px; background: #101831bb; }
+.intro p { margin: 8px 0; }
+.intro h1 { margin: 8px 0; font-size: clamp(32px, 6vw, 54px); }
+em { color: #bbc5ff; font-style: normal; }
+.avatar { display: grid; width: 48px; height: 48px; place-items: center; border: 1px solid #fff8; border-radius: 50%; background: #fff2; font-weight: bold; }
+.button { display: inline-block; margin-top: 8px; padding: 8px 12px; border-radius: 9px; background: white; color: #182238; text-decoration: none; }
+section { padding: 22px 0; scroll-margin-top: 85px; }
+h2 { margin: 0 0 12px; font-size: 26px; }
+h3 { margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.card { display: block; padding: 16px; border: 1px solid var(--line); border-radius: 13px; background: var(--card); color: var(--ink); text-decoration: none; }
+.card p { margin: 6px 0 0; color: var(--muted); }
+.card small { color: var(--muted); }
+.project { display: block; }
+.project small { color: var(--accent); }
+.card[href]:hover { border-color: var(--accent); }
+footer { display: flex; justify-content: space-between; margin-top: 20px; padding: 18px max(16px, calc((100% - 1000px) / 2)); border-top: 1px solid var(--line); color: var(--muted); }
+footer a { color: var(--accent); text-decoration: none; }
+@media (max-width: 800px) {
+  header { flex-wrap: wrap; }
+  nav { order: 3; width: 100%; justify-content: flex-start; overflow: auto; flex-wrap: nowrap; }
+  nav a { white-space: nowrap; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { min-height: 300px; }
+  .intro { padding: 22px; }
+  section { padding: 16px 0; }
+}
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a class="brand" href="#home"><b>SJ</b> Satva Joshi</a>
+    <nav aria-label="Sections">
+      <a href="#home">Home</a><a href="#about">About</a>
+      <a href="#education">Education</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#hobbies">Hobbies</a>
+      <a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="intro">
+        <span class="avatar">SJ</span><p>STUDENT PORTFOLIO</p>
+        <h1>Hi, I'm <em>Satva Joshi</em></h1>
+        <h3>B.Tech · CSE (AI-ML) · 2026</h3>
+        <p>Bosscoder School of Technology (BST)</p>
+        <a class="button" href="#projects">View my project</a>
+      </div>
+    </section>
+    <section id="about"><h2>About</h2>
+      <article class="card">I'm Satva, a BST student who enjoys solving DSA and math problems and learning web development.</article>
+    </section>
+    <section id="education"><h2>Education</h2>
+      <article class="card"><b>Bosscoder School of Technology (BST)</b><p>B.Tech · CSE (AI-ML) · 2026</p></article>
+    </section>
+    <section id="skills"><h2>Currently learning</h2>
+      <div class="grid">
+        <article class="card">Java · Recursion</article>
+        <article class="card">HTML · CSS · JavaScript</article>
+        <article class="card">DSA · Mathematics</article>
+      </div>
+    </section>
+    <section id="projects"><h2>Project</h2>
+      <article class="card project">
+        <h3>Web-Dev-Lab-Exercises</h3><p>Web development practice exercises.</p><small>HTML · CSS · JavaScript</small>
+      </article>
+    </section>
+    <section id="hobbies"><h2>Hobbies</h2>
+      <div class="grid">
+        <article class="card">∑ <b>Solving math</b></article>
+        <article class="card">{ } <b>Solving DSA</b></article>
+        <article class="card">♫ <b>Listening to music</b></article>
+      </div>
+    </section>
+    <section id="achievements"><h2>Achievements</h2>
+      <div class="grid">
+        <article class="card"><b>12th pass</b></article>
+        <article class="card"><b>Attempted SIH</b><p>Smart India Hackathon</p></article>
+      </div>
+    </section>
+    <section id="contact"><h2>Contact</h2>
+      <div class="grid">
+        <a class="card" href="mailto:joshisatva462@gmail.com">Email<br><b>joshisatva462@gmail.com</b></a>
+        <a class="card" href="https://github.com/joshisatva462-oss" target="_blank" rel="noreferrer">GitHub<br><b>joshisatva462-oss</b></a>
+        <article class="card">LinkedIn<br><b>Satva Joshi</b><br><small>Bosscoder School of Technology</small></article>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 Satva Joshi · <a href="#home">Back to top ↑</a></footer>
+</div>
+</body>
+</html>
